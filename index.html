@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div id="container">
+            <div id="focusBreakButtons">
+                <button onclick="setFocusMode()" class="focus">Focus</button>
+                <button onclick="setBreakMode()" class="break">Break</button>
+            </div>
+            <div id="timer">25:00</div>
+            <div id="buttons">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="restartTimer()">Restart</button>
+                <button onclick="showSettings()">Settings</button>
+            </div>
+            <div id="settings">
+                <label>Focus Time (minutes):</label>
+                <input type="number" id="focusTime" min="1" value="25">
+                <br>
+                <label>Break Time (minutes):</label>
+                <input type="number" id="breakTime" min="1" value="5">
+                <br>
+                <button onclick="saveChanges()">Save Changes</button>
+                <button onclick="discardChanges()">Discard Changes</button>
+                <button onclick="resetChanges()">Reset Changes</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
